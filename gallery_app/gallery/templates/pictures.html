@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% block title%}
+Pictures
+{% endblock %}
+{% block content %}
+<div class="row mt-5 text-center">
+    {% for picture in pictures %}
+    <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <div class="card text-black">
+
+            <img src="{{picture.picture.url}}" class="card-img-top" alt="" />
+
+            <div class="card-body">
+                <div class="text-center mt-1">
+                    <h6 class="text-secondary mb-1 pb-3">Description: {{picture.description}}</h6>
+                    <h6 class="text-secondary mb-1 pb-3">Author: {{picture.author}}</h6>
+                    <h6 class="text-secondary mb-1 pb-3">Author: {{picture.created_at}}</h6>
+                </div>
+                <div class="d-flex flex-row">
+                    <a href="#" type="button" class="btn btn-primary flex-fill me-1" data-mdb-ripple-color="dark">
+                        Learn more
+                    </a>
+                    <a href="{% url 'picture_update' picture.pk%}" type="button" class="btn btn-danger flex-fill ms-1">Edit</a>
+                    <a href="{% url 'picture_delete' picture.pk%}" type="button" class="btn btn-danger flex-fill ms-1">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+</div>
+{% endblock %}

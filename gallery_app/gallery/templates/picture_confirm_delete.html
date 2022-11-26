@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="card mx-auto mt-5v text-center mt-5" style="width: 50rem;">
+    <div class="card-body">
+        <h1 class="card-title">Are you really want to delete?</h1>
+        <img src="{% static 'product_images/no-photo.jpg' %}" class="w-75 h-75" alt="Image" />
+        <h5 class="card-title">Description: {{picture.description}}</h5>
+        <h5 class="card-title">Description: {{picture.created_at}}</h5>
+        <h5 class="card-title">Description: {{picture.author}}</h5>
+        <div class="text-center">
+            <form action="{% url 'picture_confirm_delete' picture.pk %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Yes</button>
+                <a class="btn btn-primary" href="{% url 'pictures'%}">No</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
