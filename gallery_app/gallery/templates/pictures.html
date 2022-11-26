@@ -3,6 +3,7 @@
 Pictures
 {% endblock %}
 {% block content %}
+{% csrf_token %}
 <div class="row mt-5 text-center">
     {% for picture in pictures %}
     <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
@@ -23,15 +24,12 @@ Pictures
                     {% if request.user == picture.author or request.user.is_superuser%}
                         <a href="{% url 'picture_update' picture.pk%}" type="button" class="btn btn-danger flex-fill ms-1">Edit</a>
                         <a href="{% url 'picture_delete' picture.pk%}" type="button" class="btn btn-danger flex-fill ms-1">Delete</a>
-                    {%else%}
                     {%endif%}
+                    <a href="" type="button" class="btn btn-danger flex-fill ms-1 favorite" data-picture="{{picture.id}}" id="add-to-favorite">Favorite</a> 
                 </div>
             </div>
         </div>
     </div>
     {% endfor %}
-    {% if is_paginated %}
-        {% include 'partial/pagination.html' %}
-    {% endif %}
 </div>
 {% endblock %}
