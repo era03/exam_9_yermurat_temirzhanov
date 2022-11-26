@@ -1,0 +1,113 @@
+[
+{
+  "model": "gallery.picture",
+  "pk": 5,
+  "fields": {
+    "picture": "pictures/city_7xAQB4P.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T06:50:45.104Z",
+    "author": null,
+    "favorite": [
+      [
+        "root"
+      ],
+      [
+        "manager"
+      ]
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 8,
+  "fields": {
+    "picture": "pictures/city_2Zdcy7Q.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T06:58:17.456Z",
+    "author": null,
+    "favorite": [
+      [
+        "root"
+      ],
+      [
+        "manager"
+      ]
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 10,
+  "fields": {
+    "picture": "pictures/city_G5QsX6E.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T07:05:35.135Z",
+    "author": null,
+    "favorite": [
+      [
+        "root"
+      ],
+      [
+        "manager"
+      ]
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 11,
+  "fields": {
+    "picture": "pictures/city_ey720Nl.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T07:07:48.525Z",
+    "author": [
+      "root"
+    ],
+    "favorite": [
+      [
+        "root"
+      ],
+      [
+        "manager"
+      ]
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 12,
+  "fields": {
+    "picture": "pictures/city_ouJy5v3.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T08:39:24.432Z",
+    "author": [
+      "manager2"
+    ],
+    "favorite": [
+      [
+        "root"
+      ],
+      [
+        "manager"
+      ]
+    ]
+  }
+},
+{
+  "model": "gallery.picture",
+  "pk": 13,
+  "fields": {
+    "picture": "pictures/city_iLneQ7c.jpg",
+    "description": "City picture",
+    "created_at": "2022-11-26T09:35:49.482Z",
+    "author": [
+      "manager"
+    ],
+    "favorite": [
+      [
+        "manager"
+      ]
+    ]
+  }
+}
+]
