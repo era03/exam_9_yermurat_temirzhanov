@@ -18,7 +18,9 @@ class Picture(models.Model):
         verbose_name='Подпись'
     )
     favorite = models.ManyToManyField(
-        to=''
+        get_user_model(),
+        related_name='favorite_pics',
+        verbose_name='Избранные фотографии',
     )
     created_at = models.DateTimeField(
         verbose_name='Дата создания', 
